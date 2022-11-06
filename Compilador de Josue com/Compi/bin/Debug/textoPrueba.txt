@@ -1,0 +1,34 @@
+// Empieza a programar! ///
+
+
+
+
+inicio {
+
+! n 0 ! nn 3
+@ dd << gasdasd >>
+
+si ( n == nn ) com {
+
+
+
+} se si ( n == 77 ) com {
+
+ciclo : nn 0 , nn 99 , nn ++ : 
+
+
+
+}
+
+
+}
+
+
+}; 
+
+
+
+
+
+
+
