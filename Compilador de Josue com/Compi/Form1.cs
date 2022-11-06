@@ -248,7 +248,7 @@ namespace ProyectoJosue
             char[] delimitadoresCharR = { ',' };
 
             string concatenatext = "";
-
+            // Declaracion de palabras reserbadas
             string[] words = CodigoMeedCompyTxt.Text.Split(delimitadoresChar);
             int numero = 0;
             string plabrasR = System.IO.File.ReadAllText("palabras reservadas.txt");
@@ -268,7 +268,7 @@ namespace ProyectoJosue
                 {
                     concatenatext += " " + word;
 
-
+                    // Tabla de datos
                     if (word == "inicio" |
 
                       word == "si" |
@@ -290,7 +290,7 @@ namespace ProyectoJosue
 
                         if (word != "")
                         {
-                            //se jodio
+                            //se verifica las palabras reservada 
                             pantalla(word,tipo);
                             MandarPalabraReservada(word);
                             tipo = "palabra reservada"; AnalalisisSintactico(word, tipo); traducir(word, tipo); ciclo(word, tipo);
@@ -309,6 +309,7 @@ namespace ProyectoJosue
                         tipo = "sino"; AnalalisisSintactico(word, tipo); traducir(word, tipo); sintactica(word, tipo); cierres(word, tipo); ciclo(word, tipo);
 
                     }
+                    // simbolos reservados
                     else if (word == "=" |
                       word == "==" |
                        word == "<" |
@@ -331,7 +332,7 @@ namespace ProyectoJosue
 
                      )
                     {
-
+                        // asiganacion de los simbolo
                         MandarSigno(word);
                         if (word == "=") { tipo = "asignacion"; AnalalisisSintactico(word, tipo); traducir(word, tipo); sintactica(word, tipo); cierres(word, tipo); ciclo(word, tipo); pantalla(word, tipo); }
                         if (word == ",") { tipo = "separador"; AnalalisisSintactico(word, tipo); traducir(word, tipo); sintactica(word, tipo); cierres(word, tipo); ciclo(word, tipo); pantalla(word, tipo); }
@@ -360,7 +361,7 @@ namespace ProyectoJosue
                     }
 
 
-
+                    // comando de cometario
                     else if (word == "//")
                     {
                         comentario = true;
@@ -372,6 +373,7 @@ namespace ProyectoJosue
 
 
                     }
+                    // Asignacion de los () y {}
                     else if (word == "(" | word == ")" | word == "{" | word == "}" | word == "};")
                     {
 
