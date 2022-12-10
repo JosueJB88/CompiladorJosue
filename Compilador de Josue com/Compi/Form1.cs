@@ -2178,7 +2178,7 @@ namespace ProyectoJosue
         {
             //CREACION DEL ARCHIVO EJECUTABLE
 
-            TextWriter Ejecutable = new StreamWriter("EJECUTABLE.c");
+            TextWriter Ejecutable = new StreamWriter("EJECUTABLE.cc");
             Ejecutable.WriteLine(CCCode.Text);
             Ejecutable.Close();
 
@@ -2187,7 +2187,7 @@ namespace ProyectoJosue
 
             //Esto nos va abrir el archivo c
 
-            String comando = "gcc EJECUTABLE.c -o ejecC && ejecC.exe";
+            String comando = "g++ EJECUTABLE.cc -o ejecC && ejecC.exe";
             Process process = new Process();
             process.StartInfo.FileName = "cmd.exe";
             process.StartInfo.Arguments = @"start cmd.exe /K"+comando;
