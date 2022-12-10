@@ -123,6 +123,16 @@ namespace ProyectoJosue.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap c_ {
+            get {
+                object obj = ResourceManager.GetObject("c-", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap C__logo {
             get {
                 object obj = ResourceManager.GetObject("C++logo", resourceCulture);

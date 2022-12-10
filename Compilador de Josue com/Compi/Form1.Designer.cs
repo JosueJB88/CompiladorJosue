@@ -33,6 +33,7 @@
             this.minimize = new System.Windows.Forms.Label();
             this.fontSelectDialog = new System.Windows.Forms.FontDialog();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -71,6 +72,7 @@
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -109,6 +111,7 @@
             this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.BackgroundImage = global::ProyectoJosue.Properties.Resources.dark_blue_3d_wallpaper_preview;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.pictureBox6);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.label12);
             this.panel4.Controls.Add(this.pictureBox5);
@@ -145,6 +148,20 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1652, 822);
             this.panel4.TabIndex = 49;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox6.Image = global::ProyectoJosue.Properties.Resources.c_;
+            this.pictureBox6.Location = new System.Drawing.Point(1348, 85);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(77, 63);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 63;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // label8
             // 
@@ -543,7 +560,7 @@
             this.CodigoMeedCompyTxt.Size = new System.Drawing.Size(580, 496);
             this.CodigoMeedCompyTxt.TabIndex = 1;
             this.CodigoMeedCompyTxt.TabStop = false;
-            this.CodigoMeedCompyTxt.Text = "// Empieza a programar! ///\n\n\n\n\n\n\n\n\n\n\n\n";
+            this.CodigoMeedCompyTxt.Text = "// Empieza a programar# ///\n\n\n\n\n\n\n\n\n\n\n\n";
             // 
             // panel2
             // 
@@ -662,6 +679,7 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -716,12 +734,13 @@
         private System.Windows.Forms.RichTextBox richSi;
         private System.Windows.Forms.FontDialog fontSelectDialog;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.RichTextBox richcadenas;
         private System.Windows.Forms.RichTextBox varcadasig;
         private System.Windows.Forms.RichTextBox varnumasig;
         private System.Windows.Forms.RichTextBox richenteras;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
  
 

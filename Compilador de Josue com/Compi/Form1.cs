@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Text.RegularExpressions;
@@ -1691,7 +1692,7 @@ namespace ProyectoJosue
                     if (palabra == "?") { CCCode.Text += "\n}"; }
                     if (palabra == "!") { CCCode.Text += "\nint "; dec = true; }
                     if (tipo == "separador") {CCCode.Text += ";"; }
-                    if (palabra == "inicio") { CCCode.Text += "!include <iostream>\nusing namespace std;\nint main()\n"; }
+                    if (palabra == "inicio") { CCCode.Text += "#include <iostream>\nusing namespace std;\nint main()\n"; }
                     if (palabra == "};") { CCCode.Text += "\nreturn 0 ;\n}"; }
                     if (palabra == "{") { CCCode.Text += palabra + "\n"; }
                     if (palabra == "}") { CCCode.Text += palabra + "\n"; }
@@ -1813,7 +1814,7 @@ namespace ProyectoJosue
 
                                 amoc = true;
                                
-                                    CCCode.Text += "!include <iostream>\n using namespace std;\nint main()\n";
+                                    CCCode.Text += "#include <iostream>\n using namespace std;\nint main()\n";
                                     amoc = false;
                                     amoact = false;
                                 
@@ -2171,6 +2172,26 @@ namespace ProyectoJosue
         private void PictureBox5_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            //CREACION DEL ARCHIVO EJECUTABLE
+
+            TextWriter Ejecutable = new StreamWriter("EJECUTABLE.c");
+            Ejecutable.WriteLine(CCCode.Text);
+            Ejecutable.Close();
+
+            MessageBox.Show("Se acaba de crear el ejecutable");
+
+
+            //Esto nos va abrir el archivo c
+
+            String comando = "gcc EJECUTABLE.c -o ejecC && ejecC.exe";
+            Process process = new Process();
+            process.StartInfo.FileName = "cmd.exe";
+            process.StartInfo.Arguments = @"start cmd.exe /K"+comando;
+            process.Start();
         }
 
         private void AnalisisSintactico(object sender, EventArgs e)
